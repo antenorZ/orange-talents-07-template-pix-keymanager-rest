@@ -9,8 +9,7 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
 @Controller("/api/v1/clientes/{clientId}")
-class CarregaDetalhesChavePixController(val carregaChavePixClient: KeyManagerCarregaGRPCServiceGrpc.KeyManagerCarregaGRPCServiceBlockingStub,
-                                        val listaChavePixClient: KeyManagerListaServiceGrpc.KeyManagerListaServiceBlockingStub)
+class CarregaDetalhesChavePixController(val carregaChavePixClient: KeyManagerCarregaGRPCServiceGrpc.KeyManagerCarregaGRPCServiceBlockingStub)
 {
     @Get("/pix/{pixId}")
     fun carrega(clientId: String?, pixId: String?): HttpResponse<Any>{
